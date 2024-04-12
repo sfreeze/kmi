@@ -161,17 +161,26 @@ em { font-style: normal; color: var(--tigris-blue-main); }
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-width: 0;
 }
 .profile-info-wrap > .name {
     color: var(--black);
     line-height: 1.75em;
     font-weight: 600;
     font-size: 1.6rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .profile-info-wrap > .info {
     color: var(--gray7);
     line-height: 1.2em;
     font-size: 1.3rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .tab-wrap > .tab-menu {
@@ -267,8 +276,8 @@ em { font-style: normal; color: var(--tigris-blue-main); }
 }
 
 /* article */
-#main > .container > article { position: relative; width: calc(100% - 306px); }
-article h2.title { padding: 16px 0 28px 0; font-size: 32px; font-weight: 500; }
+#main > .container > article { position: relative; width: 100%; }
+article h2.title { padding: 16px 0 28px 0; font-size: 28px; font-weight: 600; }
 
 /* 검색 영역 */
 .search--box { display: flex; }
@@ -393,7 +402,7 @@ article h2.title { padding: 16px 0 28px 0; font-size: 32px; font-weight: 500; }
 
 
 /* 테이블(list) */
-.tb_basic__list { width: 100%; border-top: 1px solid var(--cool-gray); table-layout: fixed; }
+.tb_basic__list { width: 100%; border-top: 1px solid var(--gray9); table-layout: fixed; }
 .tb_basic__list thead th,
 .tb_basic__list tbody td { padding: 6px 8px; border-bottom: 1px solid var(--cool-gray-brighter); font-size: 13px; }
 .tb_basic__list thead th { height: 45px; background-color: var(--background-light); text-align: center; font-weight: 700; }
