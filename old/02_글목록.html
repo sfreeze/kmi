@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1, width=device-width">
+    <title>씨젠 법무시스템</title>
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/sub.css" />
+</head>
+<body>
+    <div id="skipMenu">
+        <a href="#main">본문 바로가기</a>
+    </div>
+    <main id="main">
+        <div class="container">
+            <nav id="lnb">
+                <div class="lnb--title">
+                    <span>법무시스템</span>
+                </div>
+                <ul class="lnb--1depth">
+                    <li class="focus"><a href="#">계약서 검토</a></li>
+                    <li><a href="#">법률자문</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h2 class="title">계약서 검토</h2>
+                <section class="list">
+                    <div class="content">
+                        <!-- 검색 영역 -->
+                        <div class="search--box">
+                            <div class="dropdown--box search-term--box">
+                                <div class="dropdown--select">기간 입력</div>
+                                <div class="dropdown--list">
+                                    <!-- 캘린더 표시 -->
+                                </div>
+                            </div>
+                            <div class="dropdown--box search--select-box">
+                                <div class="dropdown--select">제목 + 내용</div>
+                                <ul class="dropdown--list">
+                                    <li>법인</li>
+                                    <li>부서명</li>
+                                    <li>등록자</li>
+                                </ul>
+                            </div>
+                            <div class="search--input-box">
+                                <input type="text" placeholder="검색어를 입력하세요"><!--
+                                --><button class="search--button">검색</button>
+                            </div>
+                        </div>
+                        <!-- //검색 영역 -->
+    
+                        <!-- 목록 영역 -->
+                        <div class="list--table">
+                            <table class="tb_basic__list">
+                                <colgroup>
+                                    <col style="width: 8%">
+                                    <col style="width: 35%">
+                                    <col style="width: 12%">
+                                    <col style="width: 8%">
+                                    <col style="width: 10%">
+                                    <col style="width: 15%">
+                                    <col style="width: 12%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>상태</th>
+                                        <th>제목</th>
+                                        <th>법인</th>
+                                        <th>부서명</th>
+                                        <th>등록자</th>
+                                        <th class="left">검토의뢰일</th>
+                                        <th class="left">검토완료요청일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">검토완료</td>
+                                        <td class="board--title"><a href="#">공지테스트 공지 글자가 넘어가면 줄였으면 좋겠는데요 공지테스트 </a></td>
+                                        <td>트레디스바이오</td>
+                                        <td class="center">커머스2팀</td>
+                                        <td class="center">홍길동 사원</td>
+                                        <td>2022-03-21 10:33</td>
+                                        <td>2022-04-15</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">검토완료</td>
+                                        <td class="board--title"><a href="#">[일반]테스트 공지사항입니다.</a></td>
+                                        <td>트레디스바이오</td>
+                                        <td class="center">커머스1팀</td>
+                                        <td class="center">홍길동 사원</td>
+                                        <td>2022-03-21 10:33</td>
+                                        <td>2022-04-15</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">검토완료</td>
+                                        <td class="board--title"><a href="#">공지 테스트</a></td>
+                                        <td>씨젠</td>
+                                        <td class="center">커머스1팀</td>
+                                        <td class="center">홍길동 사원</td>
+                                        <td>2022-03-21 10:33</td>
+                                        <td>2022-04-15</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">검토완료</td>
+                                        <td class="board--title"><a href="#">공지 테스트</a></td>
+                                        <td>씨젠</td>
+                                        <td class="center">커머스1팀</td>
+                                        <td class="center">홍길동 사원</td>
+                                        <td>2022-03-21 10:33</td>
+                                        <td>2022-04-15</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //목록 영역 -->
+    
+                        <!-- 버튼 영역 -->
+                        <div class="button--box">
+                            <a href="#" class="button primary-button">작성하기</a>
+                        </div>
+                        <!-- //버튼 영역 -->
+    
+                        <!-- 페이지네이션 -->
+                        <div class="pagination">
+                            <button class="prev--button"><span class="hide">이전</span></button>
+                            <ul>
+                                <li class="focus"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                            </ul>
+                            <button class="next--button"><span class="hide">다음</span></button>
+                        </div>
+                        <!-- //페이지네이션 -->
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+</body>
+</html>
