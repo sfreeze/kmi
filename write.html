@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1, width=device-width">
+    <title>KMI 게시판</title>
+    <link rel="stylesheet" as="style" href="./Style/font/pretendard-subset.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/sub.css" />
+</head>
+<body>
+    <main id="main">
+        <div id="left" class="main-left">
+            <div class="profile-wrap">
+                <div class="profile-img-wrap">
+                    <img class="profile-img" src="./assets/images/temp/profile.png" alt="">
+                </div>
+                <div class="profile-info-wrap">
+                    <p class="name">김하늘 사원</p>
+                    <p class="info">전략 기획 사업부</p>
+                </div>
+            </div>
+            
+            <div class="tab-wrap">
+                <div class="tab-menu">
+                    <ul>
+                        <li class="active">게시판</li>
+                        <li>문서</li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <ul>
+                        <li class="tab-item">
+                            <nav class="lnb">
+                                <ul class="tree-list">
+                                    <li>
+                                        <div class="tree-title">
+                                            <a href="#">인사제도</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tree-title">
+                                            <a href="#">노사상생프로그램</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tree-title">
+                                            <a href="#">인재개발프로그램</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tree-title">
+                                            <button class="tree-arrow-btn"><svg class="icon"><use href="./assets/images/sprite-sheet.svg#arrow-down"/></svg></button>
+                                            <a href="#">KICS</a>
+                                        </div>
+                                        <ul class="tree-2depth">
+                                            <li class="select"><a href="#">KICS 추가 개발 요청</a></li>
+                                            <li><a href="#">사용자 매뉴얼 및 FAQ 모음집</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="tree-title">
+                                            <button class="tree-arrow-btn"><svg class="icon"><use href="./assets/images/sprite-sheet.svg#arrow-down"/></svg></button>
+                                            <a href="#">KMI 자료실</a>
+                                        </div>
+                                        <ul class="tree-2depth">
+                                            <li><a href="#">크미브런치</a></li>
+                                            <li><a href="#">동영상게시판</a></li>
+                                            <li><a href="#">KMI 자료실</a></li>
+                                            <li><a href="#">인증서게시판</a></li>
+                                            <li><a href="#">홍보자료 게시판</a></li>
+                                            <li><a href="#">어어어엄청길어졌을때는 이렇게 말줄임표</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="tree-title">
+                                            <button class="tree-arrow-btn"><svg class="icon"><use href="./assets/images/sprite-sheet.svg#arrow-up"/></svg></button>
+                                            <a href="#">어어어엄청길어졌을때는 이렇게 말줄임표</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <article>
+                <h2 class="title">계약서 검토</h2>
+                <section class="write">
+                    <!-- 결재 서명란 -->
+                    <div class="signature--box">
+                        <table class="signature--table">
+                            <colgroup>
+                                <col style="width: 33.3%">
+                                <col style="width: 33.3%">
+                                <col style="width: 33.3%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>담당자</th>
+                                    <th>팀장</th>
+                                    <th>법무담당자</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td>홍길서</td>
+                                    <td>법무담당자</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- //결재 서명란 -->
+
+                    <div class="content">
+                        <!-- 글 쓰기 영역 -->
+                        <div class="write--table">
+                            <table class="tb_basic">
+                                <colgroup>
+                                    <col style="width: 10%">
+                                    <col style="width: 40%">
+                                    <col style="width: 15%">
+                                    <col style="width: 35%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>제목</th>
+                                        <td colspan="3"><input type="text" class="tb_input" placeholder="제목을 입력하세요"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>부서명</th>
+                                        <td>시스템운영팀</td>
+                                        <th>검토의뢰일</th>
+                                        <td>2022-04-21</td>
+                                    </tr>
+                                    <tr>
+                                        <th>등록자</th>
+                                        <td>홍길동</td>
+                                        <th>검토완료요청일</th>
+                                        <td>
+                                            <div class="dropdown--box request-date--box">
+                                                <div class="dropdown--select">2022-04-26</div>
+                                                <div class="dropdown--list">
+                                                    <!-- 캘린더 표시 -->
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt_top">검토요청내용<br><span class="desc">(등록자 작성)</span></th>
+                                        <td colspan="3"><textarea class="tb_textarea"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt_top">계약서 파일첨부<br><span class="desc">(등록자 작성)</span></th>
+                                        <td colspan="3">
+                                            <!-- 파일 첨부 영역 추가 -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //글 쓰기 영역 -->
+    
+                        <!-- 버튼 영역 -->
+                        <div class="button--box">
+                            <button class="button primary-button">검토요청</button><!--
+                            --><button class="button light-button">취소</button>
+                        </div>
+                        <!-- //버튼 영역 -->
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+</body>
+</html>
