@@ -298,8 +298,8 @@ article h2.title { padding: 16px 0 28px 0; font-size: 28px; font-weight: 600; }
 /* 목록 */
 .list--table { margin: 20px 0 16px 0; }
 /* 글 쓰기 */
-.view--table { margin: 52px 0 16px 0; }
-.write--table { margin: 52px 0 16px 0; }
+.view--table { margin: 0 0 16px 0; }
+.write--table { margin: 0 0 16px 0; }
 
 /* 버튼 영역 */
 .button--box { margin-bottom: 16px; text-align: right; }
@@ -351,7 +351,7 @@ article h2.title { padding: 16px 0 28px 0; font-size: 28px; font-weight: 600; }
 .comment-write .comment-write--util .button { min-width: auto; height: 32px; padding: 0 20px; line-height: 32px; font-size: 12px; font-weight: 700; }
 
 /* 프린트 */
-.print-button { position: absolute; top: 65px; right: 256px; display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 8px; border: 1px solid var(--cool-gray-bright); background-color: #fff; }
+.print-button { position: absolute; top: 10px; right: 0; display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 8px; border: 1px solid var(--cool-gray-bright); background-color: #fff; transition: .2s ease; }
 .print-button:before { display: block; width: 24px; height: 24px; background-position: 0 -44px; content: ''; }
 .print-button:hover { background-color: var(--background-light); }
 
