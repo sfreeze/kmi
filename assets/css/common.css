@@ -208,6 +208,7 @@ main { display: flex; min-width: 1200px; height: 100%; color: var(--gray9); font
     line-height: 1.5em;
     font-weight: 600;
     font-size: 1.6rem;
+    cursor: pointer;
 }
 .tab-menu > ul > li.active {
     color: var(--main-regular);
