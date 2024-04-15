@@ -1,7 +1,9 @@
 @charset "utf-8";
+/* (kmi 수정) 웹폰트 import 삭제 */
 
 /** reset.css **/
 html, body {
+    /* (kmi수정) height: 100% 추가 */
     height: 100%;
     color:#27353f;
     font-size:16px;
@@ -13,7 +15,9 @@ html, body {
     word-wrap:break-word;
     word-break:keep-all;
     scroll-behavior:smooth;
+    /* (kmi수정) overflow-x: hidden; 삭제 */
 }
+/* (kmi수정) 'Pretendard' 폰트에 작은따옴표 추가 */
 div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,7 +46,9 @@ input, select, img { vertical-align: middle; }
 form, fieldset { border: 0; }
 img { border: 0; vertical-align:middle; }
 button { cursor: pointer; }
+/* (kmi수정) button:disabled에서 커서 변경 */
 button:disabled { cursor: default; }
+/* (kmi수정) 포인트 컬러 변경 */
 em { font-style: normal; color: var(--main-regular) }
 .f_left { float: left }
 .f_right { float: right }
@@ -54,10 +60,13 @@ table .left { text-align: left !important; }
 
 /** common.css **/
 html { font-size: 62.5%; }
-body { font-weight: 400; box-sizing: border-box; scroll-behavior:smooth; overflow-x: auto; }
+/* (kmi수정) overflow-x: hidden -> auto로 변경 */
+body { overflow-x: auto; font-weight: 400; box-sizing: border-box; scroll-behavior:smooth; }
 body.hidden { position: fixed; overflow-y:hidden; touch-action: none; }
+/* (kmi수정) display: block->flex로 변경, 최소 너비 지정, height: 100% 추가, 포인트 컬러 변경 */
 main { display: flex; min-width: 1200px; height: 100%; color: var(--gray9); font-size: 1.6rem; }
 
+/* (kmi수정) 컬러 추가 */
 :root { 
     --red-main: #B60F0F;
     --red-dark: #9B2525;
@@ -86,9 +95,13 @@ main { display: flex; min-width: 1200px; height: 100%; color: var(--gray9); font
 }
 
 /** 메인, 서브 공통 **/
+/* (kmi수정) 로고, 스킵 메뉴 등 쓰지 않는 css 삭제 */
+
+/* (kmi수정) 최소 너비 설정, padding 설정, overflow-y: auto 추가 */
 .container { min-width: 960px; margin: 0 auto; padding: 4rem; overflow-y: auto; }
 
 /* 버튼 */
+/* (kmi수정) 버튼 트랜지션(부드럽게 오버) 추가, primary-button의 컬러 변경 */
 .button { display: inline-block; min-width: 130px; height: 48px; padding: 0 32px; border: 0; border-radius: 8px; text-align: center; line-height: 48px; font-size: 16px; font-weight: 500; transition: .2s ease; }
 .primary-button { background-color: var(--main-regular); color: #fff !important; }
 .primary-button:hover { background-color: var(--main-medium); }
@@ -99,6 +112,9 @@ main { display: flex; min-width: 1200px; height: 100%; color: var(--gray9); font
 
 .button + .button { margin-left: 8px; }
 
+/* (kmi수정) 미디어쿼리 삭제 */
+
+/* (kmi수정) svg 아이콘 사용을 위한 .icon 클래스 추가 */
 /* icon */
 .icon {
     fill: currentColor;
@@ -106,11 +122,16 @@ main { display: flex; min-width: 1200px; height: 100%; color: var(--gray9); font
     overflow: hidden;
     width: 1em;
 }
- 
+
+/* (kmi수정) 이 아래로는 sub.css 추가했습니다 */
+
+/* (kmi수정) #main{}, .contaier{} 삭제 */
+/* (kmi수정) #lnb ul li a:after, 삭제 */
 .dropdown--box .dropdown--select:after,
 .search--input-box .search--button:after,
 .file--name:before, .file-button, .icon-button, .print-button:before { background: url('../images/seegene_icons.png') no-repeat 0 0 / 200px 100px; }
 
+/* (kmi 수정) sidebar, profile, tab 내용 추가 */
 /* sidebar */
 .main-left {
     flex: 0 0 25rem;
@@ -205,14 +226,17 @@ main { display: flex; min-width: 1200px; height: 100%; color: var(--gray9); font
     overflow-y: auto;
 }
 
+/* (kmi 수정) 기존 #lnb 내용 전부 삭제 */
 /* lnb */
 .lnb {
     padding: 1.6rem 0;
     overflow-y: auto;
 }
 
+/* (kmi 수정) tree list 내용 추가 */
 /* tree list */
-.tree-list li.select > a {
+.tree-list li.select > a,
+.tree-list li.select > div > a {
     color: var(--main-regular);
     font-weight: 600;
 }
@@ -251,13 +275,25 @@ main { display: flex; min-width: 1200px; height: 100%; color: var(--gray9); font
     height: 2rem;
     margin-left: -2.8rem;
     margin-right: 0.8rem;
-    background-color: transparent;
+    background: url('../images/icon-arrow_up.svg') no-repeat center;
     color: var(--gray8);
     font-size: 2rem;
+    transition: .2s ease;
+}
+.tree-arrow-btn.tree--open {
+    transform: rotate(180deg);
+}
+.tree-folder > .tree-2depth {
+    display: none;
+}
+.tree-folder.active > .tree-2depth {
+    display: block;
 }
 
 /* article */
+/* (kmi 수정) width: calc(100% - 306px) -> 100% 로 변경 */
 #main > .container > article { position: relative; width: 100%; }
+/* (kmi 수정) 폰트 사이즈 32px->28px로 변경 */
 article h2.title { padding: 16px 0 28px 0; font-size: 28px; font-weight: 600; }
 
 /* 검색 영역 */
@@ -265,6 +301,7 @@ article h2.title { padding: 16px 0 28px 0; font-size: 28px; font-weight: 600; }
 .search--box > div:not(:last-child) { margin-right: 8px; }
 .search--input-box { display: flex; }
 .search--input-box input[type="text"] { height: 40px; padding: 12px 10px; border: 1px solid var(--cool-gray-brighter); border-right: 0; }
+/* (kmi 수정) 컬러 변경 */
 .search--input-box .search--button { position: relative; width: 75px; height: 40px; padding: 0 32px 0 12px; border: 1px solid var(--main-regular); background-color: var(--main-regular); color: #fff; line-height: 40px; font-size: 16px; font-weight: 600; }
 .search--input-box .search--button:after { position: absolute; top: 10px; right: 8px; display: block; width: 20px; height: 20px; background-position: -96px -20px; content: ''; }
 
@@ -279,11 +316,89 @@ article h2.title { padding: 16px 0 28px 0; font-size: 28px; font-weight: 600; }
 /* 목록 */
 .list--table { margin: 20px 0 16px 0; }
 /* 글 쓰기 */
+/* (kmi 수정) margin top 52px -> 0으로 변경 */
 .view--table { margin: 0 0 16px 0; }
 .write--table { margin: 0 0 16px 0; }
 
 /* 버튼 영역 */
 .button--box { margin-bottom: 16px; text-align: right; }
+
+/* (kmi 수정) pagination 영역 추가 */
+/* pagination */
+.pagination>ul {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    text-align: center;
+    font-size: 0;
+}
+.paging-btn {
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    color: var(--gray9);
+    font-size: 1.4rem;
+}
+.paging-btn:hover,
+.paging-btn:focus,
+.paging-btn:focus-visible {
+    background-color: var(--main-bright);
+}
+.paging-btn.active {
+    background-color: var(--main-regular);
+    color: var(--white);
+    font-weight: bold;
+}
+.paging-btn:disabled:hover {
+    background-color: transparent;
+}
+.arrow-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--gray8);
+}
+
+
+/* 테이블(list) */
+/* (kmi 수정) 상단 테두리 컬러 변경 */
+.tb_basic__list { width: 100%; border-top: 1px solid var(--gray9); table-layout: fixed; }
+.tb_basic__list thead th,
+.tb_basic__list tbody td { padding: 6px 8px; border-bottom: 1px solid var(--cool-gray-brighter); font-size: 13px; }
+/* (kmi 수정) th 문자 굵기 변경, td 컬러 변경 */
+.tb_basic__list thead th { height: 45px; background-color: var(--background-light); text-align: center; font-weight: 700; }
+.tb_basic__list tbody td { height: 40px; color: var(--gray9); text-align: left; cursor: pointer; }
+.tb_basic__list tbody tr:hover td { background-color: var(--background-light); }
+.tb_basic__list tbody td.board--title { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+/* (kmi 수정) 컬러 변경 */
+.tb_basic__list tbody td.board--title a { color: var(--gray9); }
+
+/* 테이블(write, view) */
+.tb_basic { width: 100%; border-top: 1px solid var(--cool-gray); table-layout: fixed; }
+.tb_basic th,
+.tb_basic td { height: 64px; padding: 12px 0; border-bottom: 1px solid var(--cool-gray-brighter); text-align: left; line-height: 1.2em; font-size: 13px; }
+.tb_basic th { font-weight: 500; }
+.tb_basic th .desc { color: var(--cool-gray-regular); font-size: 12px; }
+/* (kmi 수정) 컬러 변경 */
+.tb_basic td { color: var(--gray9); line-height: 1.3em; }
+
+/* 테이블(write) */
+.tb_input { width: 100%; height: 40px; padding: 0 8px; border: 1px solid var(--cool-gray-brighter); }
+.tb_textarea { width: 100%; height: 200px; padding: 8px; border: 1px solid var(--cool-gray-brighter); line-height: 1.3em; resize: none; }
+.review-state--box,
+.request-date--box { width: 125px; }
+
+/* 테이블(view) */
+.tb_view td { color: var(--black); }
+.tb_view td.board--title { color: var(--black); font-size: 16px; }
+
+.file--name { display: flex; margin-bottom: 4px; }
+.file--name:before { display: block; width: 16px; height: 16px; margin-right: 4px; background-position: -40px 0; content: ''; }
+.file--name a:hover { text-decoration: underline; }
+.file--name:last-child { margin-bottom: 0; }
 
 /* 테이블(history) */
 .tb_history { margin-top: -1px; }
@@ -330,85 +445,16 @@ article h2.title { padding: 16px 0 28px 0; font-size: 28px; font-weight: 600; }
 .comment-write .comment-write--util .button { min-width: auto; height: 32px; padding: 0 20px; line-height: 32px; font-size: 12px; font-weight: 700; }
 
 /* 프린트 */
+/* (kmi 수정) print-button 위치 변경, transition 추가 */
 .print-button { position: absolute; top: 10px; right: 0; display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 8px; border: 1px solid var(--cool-gray-bright); background-color: #fff; transition: .2s ease; }
 .print-button:before { display: block; width: 24px; height: 24px; background-position: 0 -44px; content: ''; }
 .print-button:hover { background-color: var(--background-light); }
 
 @media print {
+    /* (kmi 수정) 인쇄 화면에서 삭제할 영역: #lnb 를 #left 로 변경 */
+    #left,
     .button--box, .print-button, .comment--box, .tb_history { display: none; }
+    /* (kmi 수정) #main{} 삭제 */
     .container { width: 100%; min-width: auto; }
     #main > .container > article { width: 100%; }
 }
-
-/* 페이지네이션 영역 */
-/* pagination */
-.pagination>ul {
-    display: flex;
-    justify-content: center;
-    gap: 0.4rem;
-    text-align: center;
-    font-size: 0;
-}
-.paging-btn {
-    width: 3.2rem;
-    height: 3.2rem;
-    padding: 0;
-    border-radius: 0.4rem;
-    background-color: transparent;
-    color: var(--gray9);
-    font-size: 1.4rem;
-}
-.paging-btn:hover,
-.paging-btn:focus,
-.paging-btn:focus-visible {
-    background-color: var(--main-bright);
-}
-.paging-btn.active {
-    background-color: var(--main-regular);
-    color: var(--white);
-    font-weight: bold;
-}
-.paging-btn:disabled:hover {
-    background-color: transparent;
-}
-.arrow-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: var(--gray8);
-}
-
-
-/* 테이블(list) */
-.tb_basic__list { width: 100%; border-top: 1px solid var(--gray9); table-layout: fixed; }
-.tb_basic__list thead th,
-.tb_basic__list tbody td { padding: 6px 8px; border-bottom: 1px solid var(--cool-gray-brighter); font-size: 13px; }
-.tb_basic__list thead th { height: 45px; background-color: var(--background-light); text-align: center; font-weight: 700; }
-.tb_basic__list tbody td { height: 40px; color: var(--gray9); text-align: left; cursor: pointer; }
-.tb_basic__list tbody tr:hover td { background-color: var(--background-light); }
-.tb_basic__list tbody td.board--title { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
-.tb_basic__list tbody td.board--title a { color: var(--gray9); }
-
-/* 테이블(write, view) */
-.tb_basic { width: 100%; border-top: 1px solid var(--cool-gray); table-layout: fixed; }
-.tb_basic th,
-.tb_basic td { height: 64px; padding: 12px 0; border-bottom: 1px solid var(--cool-gray-brighter); text-align: left; line-height: 1.2em; font-size: 13px; }
-.tb_basic th { font-weight: 500; }
-.tb_basic th .desc { color: var(--cool-gray-regular); font-size: 12px; }
-.tb_basic td { color: var(--gray9); line-height: 1.3em; }
-
-/* 테이블(write) */
-.tb_input { width: 100%; height: 40px; padding: 0 8px; border: 1px solid var(--cool-gray-brighter); }
-.tb_textarea { width: 100%; height: 200px; padding: 8px; border: 1px solid var(--cool-gray-brighter); line-height: 1.3em; resize: none; }
-.review-state--box,
-.request-date--box { width: 125px; }
-
-/* 테이블(view) */
-.tb_view td { color: var(--black); }
-.tb_view td.board--title { color: var(--black); font-size: 16px; }
-
-.file--name { display: flex; margin-bottom: 4px; }
-.file--name:before { display: block; width: 16px; height: 16px; margin-right: 4px; background-position: -40px 0; content: ''; }
-.file--name a:hover { text-decoration: underline; }
-.file--name:last-child { margin-bottom: 0; }
