@@ -297,6 +297,13 @@ main { display: flex; min-width: 1200px; height: 100%; color: var(--gray9); font
 /* (kmi 수정) 폰트 사이즈 32px->28px로 변경 */
 article h2.title { padding: 16px 0 28px 0; font-size: 28px; font-weight: 600; }
 
+/* (240418 수정) 목록 유틸바 */
+.util-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* 검색 영역 */
 .search--box { display: flex; }
 .search--box > div:not(:last-child) { margin-right: 8px; }

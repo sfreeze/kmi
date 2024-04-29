@@ -104,28 +104,34 @@
                 <h2 class="title">게시판 이름</h2>
                 <section class="list">
                     <div class="content">
-                        <!-- 검색 영역 -->
-                        <div class="search--box">
-                            <div class="dropdown--box search-term--box">
-                                <div class="dropdown--select">기간 입력</div>
-                                <div class="dropdown--list">
-                                    <!-- 캘린더 표시 -->
+                        <!-- (240418 수정) util-bar 추가 -->
+                        <div class="util-bar">
+                            <!-- 검색 영역 -->
+                            <div class="search--box">
+                                <div class="dropdown--box search-term--box">
+                                    <div class="dropdown--select">기간 입력</div>
+                                    <div class="dropdown--list">
+                                        <!-- 캘린더 표시 -->
+                                    </div>
+                                </div>
+                                <div class="dropdown--box search--select-box">
+                                    <div class="dropdown--select">제목 + 내용</div>
+                                    <ul class="dropdown--list">
+                                        <li>법인</li>
+                                        <li>부서명</li>
+                                        <li>등록자</li>
+                                    </ul>
+                                </div>
+                                <div class="search--input-box">
+                                    <input type="text" placeholder="검색어를 입력하세요"><!--
+                                    --><button class="search--button">검색</button>
                                 </div>
                             </div>
-                            <div class="dropdown--box search--select-box">
-                                <div class="dropdown--select">제목 + 내용</div>
-                                <ul class="dropdown--list">
-                                    <li>법인</li>
-                                    <li>부서명</li>
-                                    <li>등록자</li>
-                                </ul>
-                            </div>
-                            <div class="search--input-box">
-                                <input type="text" placeholder="검색어를 입력하세요"><!--
-                                --><button class="search--button">검색</button>
-                            </div>
+                            <!-- //검색 영역 -->
+
+                            <a href="#" class="button primary-button">작성하기</a>
                         </div>
-                        <!-- //검색 영역 -->
+
     
                         <!-- 목록 영역 -->
                         <div class="list--table">
@@ -191,12 +197,6 @@
                             </table>
                         </div>
                         <!-- //목록 영역 -->
-    
-                        <!-- 버튼 영역 -->
-                        <div class="button--box">
-                            <a href="#" class="button primary-button">작성하기</a>
-                        </div>
-                        <!-- //버튼 영역 -->
     
                         <!-- (kmi 수정) 페이지네이션 추가 -->
                         <!-- 페이지네이션 -->
